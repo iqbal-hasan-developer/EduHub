@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<style>
+    body {
+        background-image: url("images/bg-texture.png");
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html"><h4>EduHub</h4></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+           <button id="open-menu-btn"><i class='bx bx-menu'></i></button>
+           <button id="close-menu-btn"><i class='bx bx-x'></i></button>
+        </div>
+    </nav>
+
+   <section class="contact">
+    <div class="container contact-container">
+        <aside class="contact-aside">
+            <div class="aside-img">
+                <img src="images/contact.svg" alt="">
+            </div>
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cum laudantium facilis quo, aperiam ipsa!</p>
+
+            <ul class="contact-details">
+                <li>
+                    <i class='bx bx-phone'></i>
+                    <h5>+880 01683158940</h5>
+                </li>
+                <li>
+                    <i class='bx bx-envelope'></i>
+                    <h5>iqbalhasan01683@gmail.com</h5>
+                </li>
+                <li>
+                    <i class='bx bxs-location-plus'></i>
+                    <h5>Dhaka,Bangladesh</h5>
+                </li>
+                
+            </ul>
+
+            <ul class="contact-socials">
+                <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+                <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+                <li><a href=""><i class='bx bxl-whatsapp'></i></a></li>
+                <li><a href=""><i class='bx bxl-linkedin'></i></a></li>
+           </ul>
+        </aside>
+
+
+        <form class="contact-form">
+            <div class="form-name">
+                <input type="text" name="First name" placeholder="First Name" required>
+                <input type="text" name="Last name" placeholder="Last Name" required>
+            </div>
+
+            <input type="email" name="Email Adress" placeholder="Your Email Address" required>
+
+            <textarea name="Messege" rows="7" placeholder="Messege" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Messege</button>
+        </form>
+    </div>
+   </section>
+
+
+
+
+<!--footer-->
+
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-1">
+            <a href="index.html" class="footer-logo"><h4>EduHub</h4></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </div>
+
+        <div class="footer-2">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-3">
+            <h4>Privacy</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Privacy Policy</a></li>
+                <li><a href="about.html">Terms and Conditions</a></li>
+                <li><a href="courses.html">Refund Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-4">
+            <h4>Contact Us</h4>
+            <p>+8801683158940</p>
+            <p>iqbalhasan01683@gmail.com</p>
+
+            <div class="footer-socials">
+                <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+                <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+                <li><a href=""><i class='bx bxl-whatsapp'></i></a></li>
+                <li><a href=""><i class='bx bxl-linkedin'></i></a></li>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2025 EduHub. All rights reserved || Designed By Ikbal Hossain</p>
+        
+    </div>
+</footer>
+
+
+
+        
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="main.js"></script>
+
+    <script> 
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        breakpoints: {
+            600: {
+                slidesPerView: 2,
+            }
+        }
+      });
+      </script>
+</body>
+</html>

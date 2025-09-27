@@ -36,3 +36,76 @@ openMenuBtn.addEventListener('click', () => {
 closeMenuBtn.addEventListener('click', () => {
     nav.classList.remove('nav-open');
 });
+
+
+// Intersection observer animations
+const teamMembers = document.querySelectorAll("#team-member");
+const courses = document.querySelectorAll("#course");
+const headerLeft = document.getElementById('header-left');
+
+// Team member animation
+function callbackFunction(entries) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+           
+            entry.target.classList.add('show');
+            
+            observer.unobserve(entry.target)
+        }
+    })
+}
+
+const options = {
+    threshold: 0.5
+}
+
+
+const observer = new IntersectionObserver(
+    callbackFunction,
+    options
+)
+
+teamMembers.forEach(member => {
+    observer.observe(member)
+});
+
+
+
+
+
+
+function callbackFunction2(entries) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer2.unobserve(entry.target)
+        }
+        
+    })
+}
+
+const options2 = {
+    threshold: 0.5
+}
+
+
+const observer2 = new IntersectionObserver(
+    callbackFunction2,
+    options2
+)
+
+courses.forEach(course => {
+    observer2.observe(course)
+});
+
+
+
+const observer3 = new IntersectionObserver(
+    callbackFunction2,
+    options2
+)
+
+    observer3.observe(headerLeft)
+
+
+

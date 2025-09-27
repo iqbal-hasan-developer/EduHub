@@ -60,6 +60,38 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
+
+.team-container .team-member:nth-child(1) {
+    --index: 1;
+}
+
+.team-container .team-member:nth-child(2) {
+    --index: 2;
+}
+
+.team-container .team-member:nth-child(3) {
+    --index: 3;
+}
+
+.team-container .team-member:nth-child(4) {
+    --index: 4;
+}
+
+.team-container .team-member:nth-child(5) {
+    --index: 5;
+}
+
+.team-container .team-member:nth-child(6) {
+    --index: 6;
+}
+
+.team-container .team-member:nth-child(7) {
+    --index: 7;
+}
+.team-container .team-member:nth-child(8) {
+    --index: 8;
+}
+
 .team-member {
     background: var(--color-bg-2);
     padding: 2rem;
@@ -67,7 +99,19 @@
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    visibility: hidden;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+    transition-delay: calc(var(--index) * 250ms);
 }
+
+.team-member.show {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .team-member:hover {
     background: transparent;
     border-color: 1px solid var(--color-primary);

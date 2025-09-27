@@ -25,7 +25,7 @@
     --container-width-md: 90%;
     --container-width-sm: 94%;
 
-    --transition: all 400ms ease;
+    --transition: transform 800ms ease, opacity 1s ease;
 }
 
 body {
@@ -156,11 +156,54 @@ header {
 .header-left p {
     margin: 1rem 0 2.4rem;
 }
+.header-left {
+    transition: transform 800ms, opacity 2s;
+    transform: translateX(-200px);
+    visibility: hidden;
+    opacity: 0;
+}
+.header-left.show {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.header-left:nth-child(1) {
+    transition: var(--transition);
+    transition-delay: 300ms;
+}
+.header-left:nth-child(2) {
+    transition: var(--transition);
+    transition-delay: 600ms;
+}
+.header-left:nth-child(3) {
+    transition: var(--transition);
+    transition-delay: 900ms;
+}
+
 
 /*catagories*/
 .catagories {
     background: var(--color-bg-1);
     height: 32rem;
+}
+
+.animate-left {
+    animation: slide-left both;
+    animation-timeline: view(70% 20%);
+    transition: all 1s ease;
+    transition-delay: 0.5s;
+}
+
+@keyframes slide-left {
+    from { 
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .catagories h1 {
@@ -219,6 +262,24 @@ header {
     font-size: 0.85rem;
 }
 
+.fadeUp {
+    animation: fadeUp both;
+    animation-timeline: view(70% 20%);
+  }
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(0) scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: translateY() scale(1);
+    }
+  }
+
+
+
+
 /*courses*/
 
 .courses {
@@ -234,7 +295,16 @@ header {
     text-align: center;
     border: 1px solid transparent;
     transition: var(--transition);
+    transform: translateY(100px);
+    visibility: hidden;
+    opacity: 0;
 }
+.course.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .course:hover {
     background: transparent;
     border-color: var(--color-primary);
